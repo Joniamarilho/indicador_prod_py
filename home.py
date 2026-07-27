@@ -1,10 +1,23 @@
+from pathlib import Path
 import pandas as pd
-import  plotly.express as px
+import plotly.express as px
 
+caminho_arquivo = Path(__file__).resolve().parent / "Indicador_Producao.xlsx"
 
-df = pd.read_csv("vendas.csv")
+try:
+    df = pd.read_excel(caminho_arquivo, engine="openpyxl")
+    print("Planilha lida com sucesso!")
+    print(df.head())
 
-dados = df.groupby("categoria", as_index=False)["vendas"].sum()
-print(dados)
-fig = px.bar(dados, x="categoria", y="vendas", title="Vendas por categoria")
-fig.show()
+    if "categoria" in df.columns and "vendas" in df.columns:
+        dados = df.groupby("categoria", as_index=False)["vendas"].sum()
+        print(dados)
+
+        fig = px.bar(dados, x="categoria", y="vendas", title="Vendas por categoria")
+        fig.show()
+    else:
+        print("As colunas 'categoria' e 'vendas' não foram encontradas na planilha.")
+except FileNotFoundError:
+    print(f"Arquivo não encontrado: {caminho_arquivo}")
+except Exception as e:
+    print(f"Erro ao ler a planilha: {e}")
