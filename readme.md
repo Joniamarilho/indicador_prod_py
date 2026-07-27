@@ -32,13 +32,11 @@ A base de dados requerida (ou gerada para testes) possui a seguinte estrutura m�
 
 | Coluna | Descrição | Exemplo |
 | :--- | :--- | :--- |
-| `Data` | Data da transação comercial | `2026-03-15` |
-| `Produto` | Nome do produto vendido | `Notebook` |
-| `Categoria` | Categoria na qual o produto se enquadra | `Eletrônicos` |
-| `Região` | Região onde a venda foi realizada | `Sudeste` |
-| `Quantidade` | Número de unidades vendidas | `5` |
-| `Preço Unitário` | Valor unitário do item (R$) | `3500.00` |
-| `Valor Total` | Faturamento bruto da transação (`Quantidade × Preço Unitário`) | `17500.00` |
+| `Data` | Data da produção | `2026-07-01` |
+| `Produto` | Nome do produto  | `Produto A` |
+| `Turno` | Turno resposável da produção | `Manhã e afins` |
+| `Quantidade` | Número de unidades produzidas | `5` |
+| `Quantidade Total` | Quantidade Total da produção mês (`Quantidade / Metas`)
 
 ---
 
