@@ -10,13 +10,13 @@ try:
     print(df.head())
 
     if "categoria" in df.columns and "vendas" in df.columns:
-        dados = df.groupby("categoria", as_index=False)["vendas"].sum()
+        dados = df.groupby("categoria", as_index=False)["producao"].sum()
         print(dados)
 
-        fig = px.bar(dados, x="categoria", y="vendas", title="Vendas por categoria")
+        fig = px.bar(dados, x="produto", y="Qtd_Produzida", title="Produção por produto") 
         fig.show()
     else:
-        print("As colunas 'categoria' e 'vendas' não foram encontradas na planilha.")
+        print("As colunas 'categoria' e 'producao' não foram encontradas na planilha.")
 except FileNotFoundError:
     print(f"Arquivo não encontrado: {caminho_arquivo}")
 except Exception as e:
