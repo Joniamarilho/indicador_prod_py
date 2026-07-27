@@ -25,7 +25,7 @@ try:
     print(df.columns.tolist())
 
    
-    col_categoria = next((c for c in ["categoria", "grupo", "setor", "departamento"] if c in df.columns), None)
+    col_categoria = next((c for c in ["categoria", "Turno", "Produto", "Tempo_Parada_min"] if c in df.columns), None)
     col_qtd = next((c for c in ["qtd_produzida", "qtd", "quantidade", "producao", "produzido"] if c in df.columns), None)
     col_meta = next((c for c in ["meta_producao", "meta", "meta_produção"] if c in df.columns), None)
 
