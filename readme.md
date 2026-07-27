@@ -36,7 +36,7 @@ A base de dados requerida (ou gerada para testes) possui a seguinte estrutura m�
 | `Produto` | Nome do produto  | `Produto A` |
 | `Turno` | Turno resposável da produção | `Manhã e afins` |
 | `Quantidade` | Número de unidades produzidas | `5` |
-| `Quantidade Total` | Quantidade Total da produção mês |`Quantidade / Metas`|
+| `Quantidade Total` | Quantidade Total da produção mês |`Produzido / Metas`|
 
 ---
 
