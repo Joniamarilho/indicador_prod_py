@@ -52,6 +52,6 @@ A base de dados requerida (ou gerada para testes) possui a seguinte estrutura m�
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/analise-vendas-python.git](https://github.com/seu-usuario/analise-vendas-python.git)
-   cd analise-vendas-python
+   git clone [https://github.com/seu-usuario/analise-produção-python.git](https://github.com/Joniamarilho/indicador_prod_py)
+   cd analise-produção-python
    pip install pandas matplotlib seaborn
